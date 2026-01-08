@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: Rajdhani (Futuristic/Tech/Elegant) + Outfit (Clean Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Rajdhani:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <title>Rosario AC | Architectural Intelligence</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Dynamic Background -->
+  <canvas id="lidar-canvas"></canvas>
+  <div class="vignette-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="blur-nav">
+    <div class="container nav-row">
+      <div class="brand">
+        <span class="brand-track">ROSARIO AC</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Perfil</a></li>
+        <li><a href="#products">Coleção</a></li>
+        <li><a href="#lab">Future_Lab</a></li>
+      </ul>
+      <a href="#contact" class="btn-micro">CONECTAR</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-line"></div>
+        <div class="hero-meta">SYSTEM V.2.6 // ANGOLA</div>
+        <h1>
+          A NOVA ERA DA<br>
+          <span class="thin-italic">ARQUITETURA PRÁTICA</span>
+        </h1>
+        <p class="hero-desc">
+          Redefinindo a prática arquitetónica através de <span class="highlight">Networking Estratégico</span>, <span
+            class="highlight">Visualização Cinemática</span> e <span class="highlight">Inteligência
+            Artificial</span>.
+        </p>
+
+        <div class="cta-group">
+          <a href="#products" class="btn-glitch">INITIATE SEQUENCE</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BIO / ABOUT SECTION (New) -->
+  <section id="about">
+    <div class="container bio-grid">
+      <div class="bio-image">
+        <div class="avatar-container">
+          <img src="./assets/profile_avatar.png" alt="Rosario AC" class="avatar-img">
+        </div>
+      </div>
+      <div class="bio-text">
+        <div class="section-label">00. PERFIL</div>
+        <h2>ROSARIO AC</h2>
+        <p class="role">ARCHITECTURAL DESIGNER & DIGITAL STRATEGIST</p>
+        <br>
+        <p>Não sou apenas um arquiteto. Sou um construtor de narrativas visuais e sistemas eficientes.</p>
+        <p>O meu trabalho explora a intersecção entre a arte tradicional da arquitetura e as novas fronteiras da
+          tecnologia digital. Acredito que o futuro da profissão não está em desenhar mais linhas, mas em desenhar
+          melhores processos.</p>
+        <div class="stats-mini">
+          <div>
+            <span class="val">05+</span>
+            <span class="lab">ANOS EXP</span>
+          </div>
+          <div>
+            <span class="val">100+</span>
+            <span class="lab">PROJETOS</span>
+          </div>
+          <div>
+            <span class="val">AI</span>
+            <span class="lab">NATIVO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section id="products">
+    <div class="container">
+      <div class="section-label">01. COLEÇÃO</div>
+
+      <div class="product-grid">
+        <!-- Item 01 -->
+        <article class="arch-card" onclick="openModal('networking')">
+          <div class="card-bg" style="background-image: url('./assets/networking.png');"></div>
+          <div class="corner-tl"></div>
+          <div class="corner-tr"></div>
+          <div class="corner-bl"></div>
+          <div class="corner-br"></div>
+          <div class="card-header">
+            <span class="code">NET.PROTOCOL</span>
+          </div>
+          <div class="card-body">
+            <h3>PROJETOS EXCLUSIVOS</h3>
+            <p class="subtitle">ALGORITMO SOCIAL</p>
+            <p class="desc">O código para infiltrar o mercado exclusivo de arquitetura sendo ainda estudante.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">19.000 AOA</span>
+            <span class="action">ACESSAR</span>
+          </div>
+        </article>
+
+        <!-- Item 02 -->
+        <article class="arch-card" onclick="openModal('cinematic')">
+          <div class="card-bg" style="background-image: url('./assets/cinematic.png');"></div>
+          <div class="corner-tl"></div>
+          <div class="corner-tr"></div>
+          <div class="corner-bl"></div>
+          <div class="corner-br"></div>
+          <div class="card-header">
+            <span class="code">CINE.VISUAL</span>
+          </div>
+          <div class="card-body">
+            <h3>VISUALIZAÇÃO CINEMÁTICA</h3>
+            <p class="subtitle">STORYTELLING VISUAL</p>
+            <p class="desc">Como vender projetos através de storytelling visual de elite.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">19.000 AOA</span>
+            <span class="action">ACESSAR</span>
+          </div>
+        </article>
+
+        <!-- Item 03 -->
+        <article class="arch-card" onclick="openModal('ai')">
+          <div class="card-bg" style="background-image: url('./assets/ai.jpg');"></div>
+          <div class="corner-tl"></div>
+          <div class="corner-tr"></div>
+          <div class="corner-bl"></div>
+          <div class="corner-br"></div>
+          <div class="card-header">
+            <span class="code">AI.HYBRID</span>
+          </div>
+          <div class="card-body">
+            <h3>ARQUITETO HÍBRIDO</h3>
+            <p class="subtitle">DESIGN AUMENTADO</p>
+            <p class="desc">Domine IA e automação para vender mais projetos em menos tempo.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">19.000 AOA</span>
+            <span class="action">ACESSAR</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- BUNDLE -->
+      <div class="bundle-unit" onclick="openModal('bundle')">
+        <div class="bundle-left">
+          <span class="code">OFFER.BUNDLE_V2</span>
+          <h3>FULL STACK ARCHITECT</h3>
+        </div>
+        <div class="bundle-right">
+          <div class="price-stack">
+            <span class="dim">57.000 AOA</span>
+            <span class="bright">39.000 AOA</span>
+          </div>
+          <div class="btn-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section id="lab">
+    <div class="container">
+      <div class="section-label">02. FUTURE_LAB</div>
+      <div class="product-grid">
+        <!-- Lab Item 1 -->
+        <article class="arch-card lab-card">
+          <div class="card-bg" style="background-image: url('./assets/mentoria.png');"></div>
+          <div class="card-header"><span class="code">BETA.MENTOR</span></div>
+          <div class="card-body">
+            <h3>MENTORIA</h3>
+            <p class="subtitle">PLANO DE CARREIRA</p>
+          </div>
+          <div class="card-footer"><span class="price">LISTA DE ESPERA</span></div>
+        </article>
+        <!-- Lab Item 2 -->
+        <article class="arch-card lab-card">
+          <div class="card-bg" style="background-image: url('./assets/assets_pack.png');"></div>
+          <div class="card-header"><span class="code">DEV.ASSETS</span></div>
+          <div class="card-body">
+            <h3>PACK DE ASSETS</h3>
+            <p class="subtitle">TEXTURAS & LUTS</p>
+          </div>
+          <div class="card-footer"><span class="price">BLOQUEADO</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">03. CONNECT</div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h4>EMAIL</h4>
+          <p>contact@rosarioac.com</p> <!-- Placeholder -->
+        </div>
+        <div class="contact-item">
+          <h4>SOCIAL</h4>
+          <p>@rosario.arquitetura</p> <!-- Placeholder -->
+        </div>
+        <div class="contact-item">
+          <h4>LOCATION</h4>
+          <p>Luanda, Angola</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 ROSARIO AC. TODOS OS SISTEMAS OPERACIONAIS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Container -->
+  <div id="modal-container"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
